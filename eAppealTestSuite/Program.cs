@@ -10,6 +10,8 @@ namespace eAppealTestSuite
 {
     class Program
     {
+
+        string filePath = "C:\\eAppeals.xlsx";
         // Browser web reference
         // IWebDriver driver = new ChromeDriver();
         Dictionary<int, string> testResult = new Dictionary<int, string>();
@@ -34,10 +36,10 @@ namespace eAppealTestSuite
         {
 
             List<Datacollection> data = new List<Datacollection>();
-            data = ExcelLibrary.PopulateInCollection(@"C:\eAppeals.xlsx", "Position");
+            data = ExcelLibrary.PopulateInCollection(filePath, "Position");
 
 
-            for (int i = 1; i <= ExcelLibrary.getTotalRow(@"C:\eAppeals.xlsx", "Position"); i++)
+            for (int i = 1; i <= ExcelLibrary.getTotalRow(filePath, "Position"); i++)
             {
 
                 try
@@ -167,10 +169,10 @@ namespace eAppealTestSuite
         {
 
             List<Datacollection> data = new List<Datacollection>();
-            data = ExcelLibrary.PopulateInCollection(@"C:\eAppeals.xlsx", "Discipline");
+            data = ExcelLibrary.PopulateInCollection(filePath, "Discipline");
 
 
-            for (int i = 1; i <= ExcelLibrary.getTotalRow(@"C:\eAppeals.xlsx", "Discipline"); i++)
+            for (int i = 1; i <= ExcelLibrary.getTotalRow(filePath, "Discipline"); i++)
             {
 
                 try
@@ -233,10 +235,10 @@ namespace eAppealTestSuite
         {
 
             List<Datacollection> data = new List<Datacollection>();
-            data = ExcelLibrary.PopulateInCollection(@"C:\eAppeals.xlsx", "Others");
+            data = ExcelLibrary.PopulateInCollection(filePath, "Others");
 
 
-            for (int i = 1; i <= ExcelLibrary.getTotalRow(@"C:\eAppeals.xlsx", "Others"); i++)
+            for (int i = 1; i <= ExcelLibrary.getTotalRow(filePath, "Others"); i++)
             {
 
                 try

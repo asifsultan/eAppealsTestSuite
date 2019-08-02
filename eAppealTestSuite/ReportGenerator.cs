@@ -8,12 +8,12 @@ namespace eAppealTestSuite
 {
     class ReportGenerator
     {
-
+        static string filePath = "C://template.xlsx";
         internal static void GenerateXLS(Dictionary<int, string> testResult, Dictionary<int, string> errorMessage, bool status)
         {
             var xlApp = new
             Microsoft.Office.Interop.Excel.Application();
-            var xlWorkBook = xlApp.Workbooks.Add(@"C:\eAppeals.xlsx");
+            var xlWorkBook = xlApp.Workbooks.Add(filePath);
 
 
             var xlWorkSheet = xlWorkBook.Worksheets.get_Item(5);
